@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  include includes/navbar
+  
+  div(class="container")
+    div(class="jumbotron")
+      div(class="panel panel-primary")
+        div(class="panel-heading")
+          div(class="panel-title")
+            h4 Join Us
+        div(class="panel-body")
+          p
+            | We are looking for self-motivated graduate and undergraduate students who are interested in machine learning, computational biology and big data analysis. If you are interested in our group, please send your complete curriculum vitae to
+            a(href='mailto:zengjy@gmail.com')  zengjy@gmail.com.
+      div(class="panel panel-primary")
+        div(class="panel-heading")
+          div(class="panel-title")
+            h4 加入我们
+        div(class="panel-body")
+          p
+            | 机器学习和计算生物学课题组将招聘若干名博士生，硕士生以及愿意参与科研的本科生。要求：
+          ol
+            li 理工科专业（不要求有生物背景）;
+            li 具有一定数学基础；
+            li 具有一定编程能力；
+            li 有良好的英语阅读和口语表达能力。
+          p
+            | 有兴趣的同学可将简历发至：
+            a(href='mailto:zengjy@gmail.com') zengjy@gmail.com.
+  
+  include includes/footer

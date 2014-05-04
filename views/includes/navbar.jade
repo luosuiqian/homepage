@@ -1,0 +1,50 @@
+div(class='navbar navbar-default', role='navigation')
+  div(class='container')
+    div(class='row')
+      div(class="col-md-2 col-sm-2 col-xs-2")
+        div(class='mydiv')
+          a(href='http://www.tsinghua.edu.cn/publish/then/index.html', target='_blank')
+            img(class="img-responsive",src="./img/tsinghua.png")
+      div(class="col-md-7 col-sm-7 col-xs-7")
+        div(class='mydiv')
+          a(class='my-brand', href='./index.html')
+            h1(class='text-center')
+              | <b>Machine Learning and Computational Biology Group</b>
+      div(class="col-md-3 col-sm-3 col-xs-3")
+        div(class='mydiv')
+          a(href='http://iiis.tsinghua.edu.cn/en/', target='_blank')
+            img(class="img-responsive",src="./img/iiis.png")
+      button(type="button",class="navbar-toggle",data-toggle="collapse",data-target=".navbar-collapse")
+        span(class="sr-only") Toggle navigation
+        span(class="icon-bar")
+        span(class="icon-bar")
+        span(class="icon-bar")
+    hr
+    div(class='row')
+      div(class='navbar-collapse collapse')
+        ul(class='nav nav-tabs nav-justified')
+          li(class=(name=='index')?'active':'')
+            a(href='./index.html')
+              h4 Home
+          li(class=(name=='people')?'active':'')
+            a(href='./people.html')
+              h4 People
+          li(class=(name=='publications')?'active':'')
+            a(href='./publications.html')
+              h4 Publications
+          li(class=(name=='software')?'active':'')
+            a(href='./software.html')
+              h4 Software
+          li(class=(name=='openings')?'active':'')
+            a(href='./openings.html')
+              h4 Openings
+
+script(type='text/javascript').
+  $(document).ready(function() {
+    boxes = $('.mydiv');
+    maxHeight = Math.max.apply(
+    Math, boxes.map(function() {
+      return $(this).height();
+    }).get());
+    boxes.height(maxHeight);
+  });

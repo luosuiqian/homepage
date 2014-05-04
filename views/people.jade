@@ -1,0 +1,99 @@
+extends layout
+
+block content
+  include includes/navbar
+  
+  mixin student(type, name, link, grade, school, photo)
+    div(class="col-md-6 col-sm-12 col-xs-12")
+      div(class=(type==1)?"panel panel-info":"panel panel-success")
+        div(class="panel-heading")
+          div(class="panel-title")
+            if type == 1
+              h4 Graduate student
+            else if type == 2
+              h4 Undergraduate student
+        div(class="panel-body")
+          div(class="col-md-6 col-sm-6 col-xs-6")
+            if link == ''
+              h2= name
+            else
+              a(href=link, target='_blank')
+                h2= name
+            p= grade
+            p
+              | Office: Room S-302 Mengminwei Building
+            p= school
+          div(class="col-md-6 col-sm-6 col-xs-6")
+            img(class="img-responsive img-circle",src=photo)
+  
+  div(class="container")
+    div(class='row')
+      div(class="panel panel-primary")
+        div(class="panel-heading")
+          div(class="panel-title")
+            h4 Faculty
+        div(class="panel-body")
+          div(class="col-md-9 col-sm-6 col-xs-6")
+            a(href='http://iiis.tsinghua.edu.cn/zengjy/', target='_blank')
+              h2(class="")
+                | Jianyang (Michael) Zeng
+            p(class="lead")
+              | Assistant Professor
+            p(class="lead")
+              | Office: Room S-309 Mengminwei Building
+            p(class="lead")
+              | Ph.D.: Computer Science, Duke University (2011)
+            p(class="lead")
+              | Adviser: <a href="http://www.cs.duke.edu/brd/">Dr. Bruce Donald</a> (ACM Fellow, IEEE Fellow)
+          div(class="col-md-3 col-sm-6 col-xs-6")
+            img(class="img-responsive img-circle",src="./people/Jianyang Zeng.jpg")
+    
+    hr
+    div(class='row')
+      +student(1, 'Chen Zhang', 'http://iiis.tsinghua.edu.cn/en/chenzhang/', 'M.S. Student, Grade 2011', 'IIIS (Yao Class), Tsinghua University', './people/Chen Zhang.jpg')
+      +student(1, 'Sai Zhang', '', 'Ph.D. Student, Grade 2013', 'M.E., Department of Computer Science and Technology, Tsinghua University', './people/Sai Zhang.jpg')
+      
+      div(class='clearfix visible-md visible-lg')
+      
+      +student(1, 'Huichao Gong', 'http://iiis.tsinghua.edu.cn/zh/2013311384/', 'Ph.D. Student, Grade 2013', 'Depart of Information Science and Electronic Engineering, Zhejiang University', './people/Huichao Gong.jpg')
+      +student(1, 'Suiqian Luo', '', 'M.S. Student, Grade 2013', 'IIIS (Yao Class), Tsinghua University', './people/Suiqian Luo.jpg')
+    
+    hr
+    div(class='row')
+      +student(2, 'Yanqing Zhang', '', 'Undergraduate Student, Grade 2009', 'School of Life Sciences, Tsinghua University', './people/Yanqing Zhang.jpg')
+      +student(2, 'Jinglin Yang', '', 'Undergraduate Student, Grade 2010', 'Shanghai Jiao Tong University School of Biomedical Engineering', './people/Jinglin Yang.jpg')
+      
+      div(class='clearfix visible-md visible-lg')
+      
+      +student(2, 'Rui Ma', '', 'Undergraduate Student, Grade 2010', 'IIIS (Yao Class), Tsinghua University', './people/2.jpg')
+      +student(2, 'Haoyuan Zhang', '', 'Undergraduate Student, Grade 2010', 'IIIS (Yao Class), Tsinghua University', './people/2.jpg')
+      
+      div(class='clearfix visible-md visible-lg')
+      
+      +student(2, 'Yuhao Wang', '', 'Undergraduate Student, Grade 2010', 'Department of Automation, Tsinghua University', './people/Yuhao Wang.jpg')
+      +student(2, 'Yichao Zhou', '', 'Undergraduate Student, Grade 2011', 'IIIS (Yao Class), Tsinghua University', './people/Yichao Zhou.jpg')
+      
+      div(class='clearfix visible-md visible-lg')
+      
+      +student(2, 'Siyu Wang', '', 'Undergraduate Student, Grade 2011', 'Department of Automation, Tsinghua University', './people/Siyu Wang.jpg')
+      +student(2, 'Mo Li', '', 'Undergraduate Student, Grade 2011', 'Department of Automation, Tsinghua University', './people/Mo Li.jpg')
+      
+      div(class='clearfix visible-md visible-lg')
+      
+      +student(2, 'Yunan Luo', '', 'Undergraduate Student, Grade 2012', 'IIIS (Yao Class), Tsinghua University', './people/Yunan Luo.jpg')
+      +student(2, 'Tianyi Zhang', '', 'Undergraduate Student, Grade 2012', 'IIIS (Yao Class), Tsinghua University', './people/Tianyi Zhang.jpg')
+    
+    hr
+    div(class='row')
+      div(class="panel panel-warning")
+        div(class="panel-heading")
+          div(class="panel-title")
+            h4 Contact Information
+        div(class="panel-body")
+          h4(class="")
+            | Address: FIT Building 1-208, Tsinghua University, Beijing, China, 100084
+          h4(class="")
+            | Email:
+            a(href='mailto:zengjy@gmail.com')  zengjy@gmail.com.
+  
+  include includes/footer

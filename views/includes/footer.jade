@@ -1,0 +1,32 @@
+div(id="footer")
+  div(class="container")
+    hr
+    div(class='row')
+      p(class='text-center')
+        a(href='http://iiis.tsinghua.edu.cn/en/', target='_blank')
+          | Institute for Interdisciplinary Information Sciences | Tsinghua University
+    div(class='row')
+      p(class="text-center")
+        | FIT Building 1-208, Tsinghua University, Beijing, China, 100084<br />
+        | Copyright © Machine Learning and Computational Biology Group @ IIIS, Tsinghua University. Adapted from Bootstrap
+    div(id='clustrmaps-widget',style="display:none;")
+
+script(type="text/javascript").
+  var _clustrmaps = {
+    'url' : 'http://iiis.tsinghua.edu.cn/~compbio/',
+    'user' : 1011948,
+    'server' : '4',
+    'id' : 'clustrmaps-widget',
+    'version' : 1,
+    'date' : '2014-02-19',
+    'lang' : 'zh',
+    'corners' : 'square',
+  };
+  (function (){
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'http://www4.clustrmaps.com/counter/map.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  })();

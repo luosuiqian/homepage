@@ -1,0 +1,101 @@
+extends layout
+
+block content
+  include includes/navbar
+  
+  hr
+  div(id="myCarousel",class="carousel slide",data-ride="carousel")
+    ol(class="carousel-indicators")
+      li(data-target="#myCarousel",data-slide-to="0",class="active")
+      li(data-target="#myCarousel",data-slide-to="1",class="")
+      li(data-target="#myCarousel",data-slide-to="2",class="")
+      li(data-target="#myCarousel",data-slide-to="3",class="")
+      li(data-target="#myCarousel",data-slide-to="4",class="")
+      li(data-target="#myCarousel",data-slide-to="5",class="")
+      li(data-target="#myCarousel",data-slide-to="6",class="")
+      li(data-target="#myCarousel",data-slide-to="7",class="")
+    
+    div(class="carousel-inner")
+      div(class="item active")
+        p.text-center
+          img(src="./img/1.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",role="button")
+              | Predicting Drug-Target Interactions Using Restricted Boltzmann Machines
+      div(class="item")
+        p.text-center
+          img(src="./img/2.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",href="http://www.ncbi.nlm.nih.gov/pubmed?term=High-Resolution%20Protein%20Structure%20Determination%20Starting%20with%20a%20Global%20Fold%20Calculated%20from%20Exact%20Solutions%20to%20the%20RDC%20Equations",role="button")
+              | RDC-Based Backbone Structure Determination
+      div(class="item")
+        p.text-center
+          img(src="./img/3.gif")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",href="http://www.rcsb.org/pdb/explore.do?structureId=2KIQ",role="button")
+              | FF Domain 2 of Human Transcription Elongation Factor 150 (PDB ID: 2KIQ)
+      div(class="item")
+        p.text-center
+          img(src="./img/4.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",href="http://www.ncbi.nlm.nih.gov/pubmed?term=A%20Bayesian%20Approach%20for%20Determining%20Protein%20Side-Chain%20Rotamer%20Conformations%20Using%20Unassigned%20NOE%20Data",role="button")
+              | Bayesian Approach for Side-Chain Resonance Assignment
+      div(class="item")
+        p.text-center
+          img(src="./img/5.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",href="http://www.ncbi.nlm.nih.gov/pubmed?term=Protein%20Side-Chain%20Resonance%20Assignment%20and%20NOE%20Assignment%20Using%20RDC-Defined%20Backbones%20without%20TOCSY%20Data",role="button")
+              | Automated Protein Side-Chain Resonance Assignment and NOE Assignment
+      div(class="item")
+        p.text-center
+          img(src="./img/6.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",href="http://www.ncbi.nlm.nih.gov/pubmed?term=Protein%20Loop%20Closure%20using%20Orientational%20Restraints%20from%20NMR%20Data",role="button")
+              | RDC-Based Loop Structure Determination
+      div(class="item")
+        p.text-center
+          img(src="./img/7.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",role="button")
+              | Antibody Structure Modeling
+      div(class="item")
+        p.text-center
+          img(src="./img/8.jpg")
+        div(class="container")
+          div(class="carousel-caption")
+            a(class="btn btn-sm btn-primary",role="button")
+              | Prediction of Antibody-Ligand Interactions
+    
+    a(class="left carousel-control",href="#myCarousel",data-slide="prev")
+      span(class="glyphicon glyphicon-chevron-left")
+    a(class="right carousel-control",href="#myCarousel",data-slide="next")
+      span(class="glyphicon glyphicon-chevron-right")
+  
+  hr(class='featurette-divider')
+  div(class="container")
+    div(class="well")
+      div(class='row')
+        div(class='col-md-9')
+          div(class="panel panel-success")
+            div(class="panel-heading")
+              div(class="panel-title")
+                h4 Welcome to our group!
+            div(class="panel-body")
+              h5 Our research interests lie in machine learning, bioinformatics, computational biology, data analysis and their intersections. Our group is part of the <a href="http://iiis.tsinghua.edu.cn/en/">Institute for Interdisciplinary Information Sciences (IIIS)</a> at <a href="http://www.tsinghua.edu.cn/publish/then/index.html">Tsinghua University</a>. IIIS is founded and headed by <a href="http://iiis.tsinghua.edu.cn/yao/">Prof. Andew Yao</a>.
+        div(class='col-md-3')
+          div(class="panel panel-success")
+            div(class="panel-heading")
+              div(class="panel-title")
+                h4 News
+            div(class="panel-body")
+              h5
+                a(href="/openings.html") We are recruiting new students
+  
+  include includes/footer

@@ -1,0 +1,22 @@
+.carousel-inner > .item > p > img {
+  height: 300px;
+}
+.carousel-indicators li {
+  border: 1px solid #000;
+  background-color: #ccc;
+}
+.my-ol > li {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+.my-brand:hover,
+.my-brand:focus {
+  text-decoration: none;
+}
+.mydiv {
+  vertical-align: middle;
+  display: table-cell;
+}
+.img-responsive {
+  width: 100%;
+}
